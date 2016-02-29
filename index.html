@@ -1,0 +1,162 @@
+<!--
+
+Portal Ochotnicy - http://ochotnicy.pl
+
+Copyright (C) Pracownia badań i innowacji społecznych Stocznia
+
+Development: TEONITE - http://teonite.com
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="img/favicon.png">
+
+        <title>Ochotnicy warszawscy</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/css.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Google maps -->
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(52.2259199,20.9939724,17),
+                    zoom: 13,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    streetViewControl: false
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(52.2259199,20.9939724,17),
+                    map: map,
+                    title: 'Tytuł miejsca'
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+
+
+    <body>
+        <!-- Navigation -->
+        <div class="header-box">
+            <!--<h2 class="hidden-text">Witaj na stronie Ochotników!</h2>-->
+
+            <div class="container landing-box">
+                <a class="landing-logo warszawa" href="#">
+                    <span class="corner edge left"></span>
+                    <span class="hidden-text">Strona główna - Ochotnicy</span>
+                </a>
+
+                <div class="container slogan">
+                    <div class="col-sm-8 col-xs-12">
+                        <h1>Zrób coś lepszego!</h1>
+                        <p>Łączymy ludzi z najlepszymi inicjatywami w mieście!</p>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="subheader">
+                            <span class="corner edge right"></span>
+                            <p>Dołącz do nas i znajdź inicjatywy, które Cię interesują!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container map">
+                    <div class="city-wrapper">
+                        <div class="city gdynia">
+                            <span class="corner blue right"></span>
+                            <div class="text">
+                                <h2>Gdynia</h2>
+                                <!--<p>
+                                    <span>Organizacja prowadząca:</span>
+                                    <a href="http://cwm.org.pl/kontakt" target="_blank">Centrum Współpracy Młodzieży</a>
+                                </p>-->
+                            </div>
+                            <a href="http://gdynia.ochotnicy.pl" class="link" target="_blank">gdynia.ochotnicy.pl <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        </div>
+                        <div class="city warszawa">
+                            <span class="corner blue left"></span>
+                            <div class="text">
+                                <h2>Warszawa</h2>
+                                <!--<p>
+                                    <span>Organizacja prowadząca:</span>
+                                    <a href="http://stocznia.org.pl" target="_blank">Pracownia badań i innowacji społecznych Stocznia</a>
+                                     oraz
+                                    <a href="http://wolontariat.waw.pl" target="_blank">Centrum Wolontariatu</a>
+                                </p>-->
+                            </div>
+                            <a href="http://warszawa.ochotnicy.pl" target="_blank" class="link">warszawa.ochotnicy.pl <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="landing-info">
+            <div class="container">
+                <div class="left col-md-5 col-xs-12">
+                    <h2>Projekt Ochotnicy <span>jest oprogramowaniem</span> Open Source</h2>
+                    <a href="http://www.opensource.com" target="_blank" class="small-link">http://opensource.org</a>
+                </div>
+                <div class="right col-md-7 col-xs-12">
+                    <p>
+                        Jeżeli chciałbyś uruchomić instancję w swoim mieście, zapoznaj się z tą instrukcją:
+                        <span><span class="glyphicon glyphicon-chevron-right"></span><a href="http://ochotnicy.readthedocs.org/en/latest/" target="_blank">Instrukcja instalacji i uruchomienia portalu Ochotnicy.</a></span>
+                    </p>
+                    <p>
+                        Zachęcamy także do dołączenia i rozwoju projektu Open Source na GitHub:
+                        <span><span class="glyphicon glyphicon-chevron-right"></span><a href="https://github.com/teonite/ochotnicy-web" target="_blank">https://github.com/teonite/ochotnicy-web</a></span>
+                        <span><span class="glyphicon glyphicon-chevron-right"></span><a href="https://github.com/teonite/ochotnicy-core" target="_blank">https://github.com/teonite/ochotnicy-core</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <div class="container">
+                <div class="support">
+                    <h2>Portal współfinansowany przez</h2>
+                    <div class="supporters">
+                        <a href="https://mac.gov.pl/"><img src="img/logo_ministerstwocyfryzacji.png" alt="Ministerstwo Administracji i Cyfryzacji"></a>
+                        <a href="http://www.um.warszawa.pl/"><img src="img/logo_miastostoleczne.png" alt="Miasto stołeczne Warszawa"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <p class="copy">Copyrights &copy; 2014-2015 - Pracownia badań i innowacji społecznych Stocznia</p>
+                <div class="logos">
+                    <a href="http://teonite.com/" class="madeby tnt" target="_blank">Wykonanie: <span>TEONITE</span></a>
+                    <a href="http://stocznia.org.pl/" class="madeby stocznia" target="_blank">Projekt: <span>Stocznia</span></a>
+                    <a href="https://github.com/teonite/" class="madeby github" target="_blank">OpenSource: <span>Github</span></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
